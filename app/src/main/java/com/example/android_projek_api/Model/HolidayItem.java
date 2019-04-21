@@ -3,29 +3,40 @@ package com.example.android_projek_api.Model;
 import com.google.gson.annotations.SerializedName;
 
 public class HolidayItem {
-    @SerializedName("publishedAt")
-    private String publishedAt;
+    @SerializedName("name")
+    private String name;
 
-    @SerializedName("title")
-    private String title;
+    @SerializedName("country")
+    private String country;
 
     @SerializedName("date")
     private String date;
 
-    public String getPublishedAt() {
-        return publishedAt;
+    @SerializedName("public")
+    private String publicc;
+
+    public String getPublicc() {
+        return publicc;
     }
 
-    public void setPublishedAt(String publishedAt) {
-        this.publishedAt = publishedAt;
+    public void setPublicc(String publicc) {
+        this.publicc = publicc;
     }
 
-    public String getTitle() {
-        return title;
+    public String getCountry() {
+        return country;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDate() {
@@ -40,9 +51,12 @@ public class HolidayItem {
     public String toString(){
         return
                 "HolidayItem{" +
-                        "publishedAt = '" + publishedAt + '\'' +
-                        "title = '" + title + '\'' +
+                        "name = '" + name + '\'' +
+                        "country = '" + country + '\'' +
                         "date = '" + date + '\'' +
+                        "public = '" + publicc + '\'' +
                         "}";
     }
+
+
 }

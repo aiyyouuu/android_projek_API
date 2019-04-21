@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class BaseApp extends Application {
     public static ApiService service;
-    private String BASE_URL = "http://holidayapi.pl";
+    private String BASE_URL = "https://holidayapi.pl";
     @Override
     public void onCreate() {
         super.onCreate();

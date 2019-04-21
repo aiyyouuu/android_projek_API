@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class HolidayResponse {
 
-    @SerializedName("articles")
+    @SerializedName("holidays")
     private List<HolidayItem> holidays;
 
     @SerializedName("status")
@@ -32,7 +32,7 @@ public class HolidayResponse {
     public String toString(){
         return
                 "HolidayResponse{ " +
-                        ", articles = '" + holidays + '\'' +
+                        ", holidays = '" + holidays + '\'' +
                         ", status = '" + status + '\'' +
                         "}";
     }

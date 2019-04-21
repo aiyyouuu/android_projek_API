@@ -18,9 +18,8 @@ public class MainActivity extends AppCompatActivity implements MainView {
     private RecyclerView rc;
     private HolidayAdapter adapter;
     private MainPresenter mainPresenter;
-    private String country = "PL";
+    private String country = "US";
     private String year = "2018";
-    private String day = "25";
     private String month = "12";
 
     @Override
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
         setContentView(R.layout.activity_main);
         rc = findViewById(R.id.rec_holiday);
         mainPresenter = new MainPresenter(this, this);
-        mainPresenter.loadHoliday(country, year, day, month);
+        mainPresenter.loadHoliday(country, year, month);
     }
 
     @Override

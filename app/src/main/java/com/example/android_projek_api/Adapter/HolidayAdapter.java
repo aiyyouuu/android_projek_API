@@ -43,27 +43,30 @@ public class HolidayAdapter extends RecyclerView.Adapter<HolidayAdapter.Holder>{
     }
     class Holder extends RecyclerView.ViewHolder {
         private RelativeLayout openEdukasi;
-        private TextView tvJudul;
-        private TextView tvTanggal;
+        private TextView tvName;
+        private TextView tvCountry;
         private TextView tvDate;
+        private TextView tvPublic;
 
         public Holder(View itemView) {
             super(itemView);
-            tvJudul = itemView.findViewById(R.id.tv_judul_artikel);
-            tvTanggal = itemView.findViewById(R.id.tv_tanggal);
+            tvName = itemView.findViewById(R.id.tv_name);
+            tvCountry = itemView.findViewById(R.id.tv_country);
             tvDate = itemView.findViewById(R.id.tv_date);
+            tvPublic = itemView.findViewById(R.id.tv_public);
             openEdukasi = itemView.findViewById(R.id.openEdukasi);
         }
 
         public void bind(final int position) {
-            tvJudul.setText(holidayList.get(position).getTitle());
-            tvTanggal.setText(holidayList.get(position).getPublishedAt());
+            tvName.setText(holidayList.get(position).getName());
+            tvCountry.setText(holidayList.get(position).getCountry());
             tvDate.setText(holidayList.get(position).getDate());
+            tvPublic.setText(holidayList.get(position).getPublicc());
             openEdukasi.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(context, "clicked : " +
-                                    tvJudul.getText().toString() + "\n Position : " + String.valueOf(position),
+                                    tvName.getText().toString() + "\n Position : " + String.valueOf(position),
                             Toast.LENGTH_LONG).show();
                 }
             });

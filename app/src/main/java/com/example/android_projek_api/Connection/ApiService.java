@@ -10,6 +10,5 @@ public interface ApiService {
     @GET("/v1/holidays")
     Call<HolidayResponse> getHoliday(@Query("country") String country,
                                      @Query("year") String year,
-                                     @Query("day") String day,
                                      @Query("month") String month);
 }
